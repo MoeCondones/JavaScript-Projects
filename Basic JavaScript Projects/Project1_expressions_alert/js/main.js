@@ -1,0 +1,1 @@
+document.write("let's go out and eat. but is the pizza place open?")

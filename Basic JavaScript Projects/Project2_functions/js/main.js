@@ -1,5 +1,5 @@
-function myFirstFunction () {
-    let str = "this text is green";
-    let result = str.fontcolor("green");
-    document.getElementById("green_text").innerHTML = result
+function myFirstFunc() {
+    var sentence = "im learning ";
+    sentence += "a lot from this javascript course";
+    document.getElementById("concatenate").innerHTML=sentence
 }

@@ -18,4 +18,19 @@ function divFunc(){
     document.getElementById("div").innerHTML="10 / 5="+div//divition of 10/5
 }
 
-document.write(Math.random())//generate a random number
+
+function modFunc(){
+    var simpleMath= 290 % 32;
+    document.getElementById("modulus").innerHTML="290 % 32="+simpleMath
+}
+
+let x=5;
+x++;
+document.write(x);//generates a incrementation of 5
+
+let z=8;
+z--;
+document.write(z);//generates a decremenation of 8
+
+let random = Math.random().toFixed(1)*100;
+document.write(random)//generates random number

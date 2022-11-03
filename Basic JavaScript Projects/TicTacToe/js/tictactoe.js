@@ -7,17 +7,17 @@ let selectSquares = [];
 function placeXoro(squareNumber) {
     //this condition ensures a square hasnt been placed already.
     //this .some() method is used to check each element of selectSquare array to see if it contains the square number clicked on.
-    if (!selectedSquare.some(Element => Element.includes(squareNumber))) {
+    if (!selectSquare.some(Element => Element.includes(squareNumber))) {
         //this variable retrieves the html element id that was clicked.
         let select = document.getElementById(squareNumber);
         //this condition checks whos turn it is.
         if (activePlayer === "x") {
             //if activePlayer is equal to "x", the x.png is placed in html.
-            select.style.backgroundImage = 'url ("images/x.png")';
+            select.style.backgroundImage = 'url("images/x.png")';
             //active player may only be "x" or "o" so, if not "x" it must be "o". 
         } else {
             //if activePlayer is equal to "o", the 0.png is placed in HTML.
-            select.style.backgroundImage= 'url "images/o.png"';
+            select.style.backgroundImage= 'url"images/o.png"';
         }
         //squareNumber and activePLayer are concatenated together and added to array.
         selectSquares.push(squareNumber + activePlayer);
@@ -33,7 +33,7 @@ function placeXoro(squareNumber) {
             activePlayer = "x";
         }
         //this function plays placement sound.
-        Audio('/media/place.mp3');
+        audio('/media/place.mp3');
         //this condition check to see if it is computers turn.
         if(activePlayer === "o"){
             //this funciton waits 1 second before placing the image
@@ -103,7 +103,7 @@ function checkWinConditions() {
     // and 9 squares are selected, the code executes.
     else if (selectSquares.length >= 9) {
         //this function plays the tie game sound.
-        Audio('./media/tie.mp3');
+        audio('./media/tie.mp3');
         //this funciton sets a .3 second timer before resetGame is called.
         setTimeout(function(){ resetGame();}, 1000);
     }

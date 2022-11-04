@@ -33,7 +33,7 @@ function placeXoro(squareNumber) {
             activePlayer = "x";
         }
         //this function plays placement sound.
-        audio('./media/place.mp3');
+        audio('./media/cam.mp3');
         //this condition check to see if it is computers turn.
         if(activePlayer === "o"){
             //this funciton waits 1 second before placing the image
@@ -103,7 +103,7 @@ function checkWinConditions() {
     // and 9 squares are selected, the code executes.
     else if (selectSquares.length >= 9) {
         //this function plays the tie game sound.
-        audio('./media/tie.mp3');
+        audio('./media/yawn.mp3');
         //this funciton sets a .3 second timer before resetGame is called.
         setTimeout(function(){ resetGame();}, 1000);
     }
@@ -204,7 +204,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line disallows clicking while the win sound is playing
     disableClick();
     //this line plays the win sounds.
-    audio('./media/winGame.mp3');
+    audio('./media/win.mp3');
     //this line calls our main animation loop.
     animateLineDrawing();
     //this line waits 1 second
@@ -212,3 +212,15 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     setTimeout(function(){clear(); resetGame();}, 1000)
 }
 
+//this funciton resets the game in a tie or a win. 
+function resetGame() {
+    //this for loop iterates through each html element of i.
+    for (let i = 0; i < 9; i++){
+        //this vairable gets the html element for i.
+        let square = document.getElementById(String(i));
+        //this removes our element background image.
+        square.style.backgroundImage= "";
+    }
+    //this resets our array so it is empty and we can start over.
+    selectSquares = [];
+}

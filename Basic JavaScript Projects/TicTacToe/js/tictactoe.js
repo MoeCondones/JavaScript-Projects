@@ -52,7 +52,7 @@ function placeXoro(squareNumber) {
         //this condition allows our while loop to keep trying if a square is selected already
         while (!success) {
             //a random number between 0 and 8 is selected
-            pickASquare = string(Math.floor(Math.random() * 9));
+            pickASquare = String(Math.floor(Math.random() * 9));
             //if the random number evaluates returns true, the square hasent been selected yet
             if (placeXoro(pickASquare)){
                 //this line calls the function.

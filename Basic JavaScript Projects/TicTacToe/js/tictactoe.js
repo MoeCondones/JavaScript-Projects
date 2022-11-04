@@ -26,14 +26,14 @@ function placeXoro(squareNumber) {
         //this condition is for changing the active player.
         if (activePlayer === "x"){
             //if active player is "x" change it to "o".
-            activePlayer="o";
+            activePlayer= "o";
             //if active player is anything other than "x".
         } else {
             //change the active player to "x".
             activePlayer = "x";
         }
         //this function plays placement sound.
-        audio('/media/place.mp3');
+        audio('./media/place.mp3');
         //this condition check to see if it is computers turn.
         if(activePlayer === "o"){
             //this funciton waits 1 second before placing the image
@@ -70,35 +70,35 @@ function checkWinConditions() {
     //c 0, 1, 2, conditon.
     if (arrayincludes('0x', '1x', '2x')) {drawWinLine(50,100,558,100); }
     // x3, 4, 5 conditons.
-    else if (arrayincludes('3x','4x','2x')) {drawWinLine(50, 304, 558, 304); }
+    else if (arrayincludes('3x','4x','5x')) {drawWinLine(50, 304, 558, 304); }
     // x6, 7, 8 conditions
-    else if (arrayincludes('3x','7x','5x')) {drawWinLine(50, 508, 558, 508); }
+    else if (arrayincludes('6x','7x','8x')) {drawWinLine(50, 508, 558, 508); }
     // x0, 3, 6 conditions
-    else if (arrayincludes('6x','3x','8x')) {drawWinLine(100, 50, 100, 558); }
+    else if (arrayincludes('0x','3x','6x')) {drawWinLine(100, 50, 100, 558); }
     // x1, 4, 7 conditions
-    else if (arrayincludes('0x','4x','6x')) {drawWinLine(304, 50, 304, 558); }
+    else if (arrayincludes('1x','4x','7x')) {drawWinLine(304, 50, 304, 558); }
     // x2, 5, 8 conditions
-    else if (arrayincludes('1x','5x','7x')) {drawWinLine(508, 50, 508, 558); }
+    else if (arrayincludes('2x','5x','8x')) {drawWinLine(508, 50, 508, 558); }
     // x6, 4, 2 conditions
-    else if (arrayincludes('2x','4x','8x')) {drawWinLine(100, 508, 510, 90); }
+    else if (arrayincludes('6x','4x','2x')) {drawWinLine(100, 508, 510, 90); }
     // x0, 4, 8 conditions
-    else if (arrayincludes('6x','4x','2x')) {drawWinLine(100, 100, 520, 520); }
+    else if (arrayincludes('0x','4x','8x')) {drawWinLine(100, 100, 520, 520); }
     // o0, 1, 2 conditions
-    else if (arrayincludes('0o','1o','8o')) {drawWinLine(50, 100, 558, 100); }
+    else if (arrayincludes('0o','1o','2o')) {drawWinLine(50, 100, 558, 100); }
     // o3, 4, 5 conditions
-    else if (arrayincludes('0o','4o','2o')) {drawWinLine(50, 230, 558, 204); }
+    else if (arrayincludes('3o','4o','5o')) {drawWinLine(50, 230, 558, 204); }
     // o6, 7, 8 conditions
-    else if (arrayincludes('3o','7o','5o')) {drawWinLine(50, 508, 558, 508); }
+    else if (arrayincludes('6o','7o','8o')) {drawWinLine(50, 508, 558, 508); }
     // o0, 3, 6 conditions
-    else if (arrayincludes('6o','3o','6o')) {drawWinLine(100, 50, 100, 558); }
+    else if (arrayincludes('0o','3o','6o')) {drawWinLine(100, 50, 100, 558); }
     // o1, 4, 7 conditions
-    else if (arrayincludes('0o','4o','7o')) {drawWinLine(304, 50, 304, 558); }
+    else if (arrayincludes('1o','4o','7o')) {drawWinLine(304, 50, 304, 558); }
     // o2, 5 ,8 conditions
-    else if (arrayincludes('1o','5o','8o')) {drawWinLine(508, 50, 508, 558); }
+    else if (arrayincludes('2o','5o','8o')) {drawWinLine(508, 50, 508, 558); }
     // o6, 4, 2 conditions
-    else if (arrayincludes('2o','4o','2o')) {drawWinLine(100, 508, 520, 90); }
+    else if (arrayincludes('6o','4o','2o')) {drawWinLine(100, 508, 520, 90); }
     // o0, 4, 8 conditions
-    else if (arrayincludes('6o','4o','8o')) {drawWinLine(100, 100, 520, 520); }
+    else if (arrayincludes('0o','4o','8o')) {drawWinLine(100, 100, 520, 520); }
     //this condition checks for tie, if one of the above conditions register
     // and 9 squares are selected, the code executes.
     else if (selectSquares.length >= 9) {
@@ -165,7 +165,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //this method starts a new path
         c.beginPath();
         //this method moves us to a starting point in out line.
-        c.lineTo(x1, y1);
+        c.moveTo(x1, y1);
         //this method indicates the end point in out line.
         c.lineTo(x, y);
         //this method sets the width of the lines.
@@ -204,7 +204,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line disallows clicking while the win sound is playing
     disableClick();
     //this line plays the win sounds.
-    audio('/media/winGame.mp3');
+    audio('./media/winGame.mp3');
     //this line calls our main animation loop.
     animateLineDrawing();
     //this line waits 1 second

@@ -1,5 +1,5 @@
 //creates an object to keep track of values
-const Calculator= {
+const Calculator = {
     //this displays 0 on the screen 
     Display_Value: '0',
     //this will hold the first operand for any expression, we set it to null for now
@@ -72,6 +72,7 @@ function Handle_Operator(Next_Operator) {
 const Perform_Calculation = {
     '/': (First_Operand, Secont_Operand) => First_Operand / Secont_Operand,
     '*': (First_Operand, Secont_Operand) => First_Operand * Secont_Operand,
+    '+': (First_Operand, Secont_Operand) => First_Operand + Secont_Operand,
     '-': (First_Operand, Secont_Operand) => First_Operand - Secont_Operand,
     '=': (First_Operand, Secont_Operand) => Secont_Operand
 };
@@ -83,8 +84,15 @@ function Calculator_Reset() {
     Calculator.operator = null;
 }
 
+//this fuction updates the screen with the content of Display_Value
+function Update_Display() {
+    const display = document.querySelector('.calculator-screen')
+    display.value = Calculator.Display_Value;
+}
+Update_Display();
+
 //this section monitors button clicks
-const keys = document.querySelector('.calculator-screen');
+const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
     //the target variable is an object that represents the element
     //that was clicked

@@ -1,5 +1,5 @@
 body {
-    background-image: url(/img/pizza.jpg);
+    background-image: url(../img/pizza.jpg);
     background-position: center;
     background-size: cover;
     image-rendering: optimizeQuality;

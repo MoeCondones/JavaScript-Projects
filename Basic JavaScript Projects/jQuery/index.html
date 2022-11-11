@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <script>
+    $(document).ready(function () {
+      $("html").append(
+        "<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>basic jquery</h1>\
+                    <p>par 1</p>\
+                    <p>par 2</p>\
+                </div>\
+            </div>\
+        <body>"
+      );
+      $("h1").click(function () {
+        $("h1").css("color", "blue");
+      });
+      $("p").click(function () {
+        $("p").hide();
+      });
+    });
+  </script>
+</html>

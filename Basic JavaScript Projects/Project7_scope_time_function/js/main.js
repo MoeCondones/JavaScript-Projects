@@ -21,11 +21,16 @@ function ifFunc(){//creating a new function
 
 function func1(){//creating a new function
     var k = 10//assigning a value to k
-    document.write(20+k);//printing 20+k
+    document.write(20 + k);//printing 20+k
 }
 
 function func2(){//creating a new function
-    document.write(29*k);//printing 29*k
+    console.log(29*k);//printing 29*k
+    if (k=10){ 
+        console.log("there is an error for k")
+    }else {
+        console.log("")
+    }
 }
 func1();//calling func1
 func2();// calling func2

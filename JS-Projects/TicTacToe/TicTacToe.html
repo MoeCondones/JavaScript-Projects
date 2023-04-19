@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body id="body">
+    <h1>Play the Game!</h1>
+    <!--this container is needed to overlay our canvas over our table.-->
+    <div class="center-container">
+      <!--Note: canvas width and height must be set within the element.-->
+      <canvas id="win-lines" width="608" height="608"></canvas>
+      <table>
+        <tr>
+          <td id="0" onclick='placeXoro("0")'></td>
+          <td id="1" onclick='placeXoro("1")'></td>
+          <td id="2" onclick='placeXoro("2")'></td>
+        </tr>
+        <tr>
+          <td id="3" onclick='placeXoro("3")'></td>
+          <td id="4" onclick='placeXoro("4")'></td>
+          <td id="5" onclick='placeXoro("5")'></td>
+        </tr>
+        <tr>
+          <td id="6" onclick='placeXoro("6")'></td>
+          <td id="7" onclick='placeXoro("7")'></td>
+          <td id="8" onclick='placeXoro("8")'></td>
+        </tr>
+      </table>
+    </div>
+    <p id="demo"></p>
+    <script src="js/tictactoe.js"></script>
+  </body>
+</html>

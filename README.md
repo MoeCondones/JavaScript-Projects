@@ -23,6 +23,7 @@
 
 <h1> This is my Javascript repository </h1>
 <h3> Basic Javascript Projects: </h3>
+
 - This folder consists of projects that helped me learn Javascript
 
 - Pizza_Project: this is a pizza ordering app created with HTML, CSS And JavaScript

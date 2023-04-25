@@ -25,7 +25,7 @@
 <h4> Basic Javascript Projects: </h4>
 - This folder consists of projects that helped me learn Javascript
 
-<h4> JS-Projects: </h4>
+<h4> JS-Projects </h4>
 - Pizza_Project: this is a pizza ordering app created with HTML, CSS And JavaScript
 - TicTacToe: This is a TicTacToe Game Created with HTML, CSS and Javascript. try it 😁.
 - Calculator: this is a calculator created using HTML, CSS and Javascript.

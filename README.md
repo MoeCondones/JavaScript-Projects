@@ -26,6 +26,8 @@
 
 - This folder consists of projects that helped me learn Javascript
 
+<h3> JS-Projects: </h3>
+
 - Pizza_Project: this is a pizza ordering app created with HTML, CSS And JavaScript
 - TicTacToe: This is a TicTacToe Game Created with HTML, CSS and Javascript. try it 😁.
 - Calculator: this is a calculator created using HTML, CSS and Javascript.
